@@ -17,44 +17,56 @@ char** split_string(char*);
 int parse_int(char*);
 
 /*
- * Complete the 'plusMinus' function below.
+ * Complete the 'birthday' function below.
  *
- * The function accepts INTEGER_ARRAY arr as parameter.
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY s
+ *  2. INTEGER d
+ *  3. INTEGER m
  */
 
-void plusMinus(int arr_count, int* arr) {
-    int posvi = 0;
-    int negvi = 0;
-    int zero = 0;
-    for (int i=0; i < arr_count; i++){
-        if (arr[i] > 0){
-            posvi++;
-        } else if (arr[i]<0) {
-            negvi++;
-        } else {
-            zero++;
+int birthday(int s_count, int* s, int d, int m) {
+    int count=0;
+    for(int i=0; i<s_count; i++){
+        int sum = 0;
+        for(int j=i; j<m+i; j++){
+            sum = sum+s[j];
+        }
+        if(sum==d){
+            count++;
         }
     }
-printf("%f\n", (float)posvi /arr_count);
-printf("%f\n", (float)negvi / arr_count);
-printf("%f\n", (float)zero / arr_count);
+    return count;
 }
 
 int main()
 {
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
     int n = parse_int(ltrim(rtrim(readline())));
 
-    char** arr_temp = split_string(rtrim(readline()));
+    char** s_temp = split_string(rtrim(readline()));
 
-    int* arr = malloc(n * sizeof(int));
+    int* s = malloc(n * sizeof(int));
 
     for (int i = 0; i < n; i++) {
-        int arr_item = parse_int(*(arr_temp + i));
+        int s_item = parse_int(*(s_temp + i));
 
-        *(arr + i) = arr_item;
+        *(s + i) = s_item;
     }
 
-    plusMinus(n, arr);
+    char** first_multiple_input = split_string(rtrim(readline()));
+
+    int d = parse_int(*(first_multiple_input + 0));
+
+    int m = parse_int(*(first_multiple_input + 1));
+
+    int result = birthday(n, s, d, m);
+
+    fprintf(fptr, "%d\n", result);
+
+    fclose(fptr);
 
     return 0;
 }
