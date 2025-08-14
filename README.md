@@ -19,10 +19,6 @@
 │
 ├── Module 3 - Linux_Commands/
 │
-├── C_Programs/  # Problem-solving and practice in C
-│
-├── Agile/       # Notes and exercises on Agile methodologies
-│
 ├── Sololearn_C_Certificate/
 │
 └── README.md    # Project documentation
