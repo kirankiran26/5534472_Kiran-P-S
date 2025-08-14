@@ -1,10 +1,17 @@
+# 5534472_Kiran-P-S
+
+
+
+## Repository Structure
+
+```
 5534472_KiranPS/
 │
 ├── HackerRank/
-│ ├── Week1/ # Assignments and code for Week 1
-│ ├── Week2/ # Assignments and code for Week 2
-│ ├── Week3/ # Assignments and code for Week 3
-│ └── Week4/ # Assignments and code for Week 4
+│   ├── Week1/   # Assignments and code for Week 1
+│   ├── Week2/   # Assignments and code for Week 2
+│   ├── Week3/   # Assignments and code for Week 3
+│   └── Week4/   # Assignments and code for Week 4
 │
 ├── Module 1 - Software Development Life Cycle (SDLC)/
 │
@@ -12,10 +19,11 @@
 │
 ├── Module 3 - Linux_Commands/
 │
-├── C_Programs/ # Problem-solving and practice in C
+├── C_Programs/  # Problem-solving and practice in C
 │
-├── Agile/ # Notes and exercises on Agile methodologies
+├── Agile/       # Notes and exercises on Agile methodologies
 │
 ├── Sololearn_C_Certificate/
 │
-└── README.md # Project documentation
+└── README.md    # Project documentation
+```
